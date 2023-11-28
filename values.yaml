@@ -937,7 +937,7 @@ grafana:
 
     ## Annotations for Grafana Ingress
     ##
-    annotations: {}
+    annotations: 
       kubernetes.io/ingress.class: azure/application-gateway
       # kubernetes.io/tls-acme: "true"
 
