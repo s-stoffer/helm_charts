@@ -950,7 +950,7 @@ grafana:
     ##
     # hosts:
     #   - grafana.domain.com
-    hosts: []
+    hosts: 
       - pbl-grafana.nl
     ## Path for grafana ingress
     path: /
