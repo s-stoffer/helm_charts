@@ -1024,6 +1024,22 @@ grafana:
         handleGrafanaManagedAlerts: false
         implementation: prometheus
 
+      #Datasource for mysql connection
+      datasources.yaml:
+        apiVersion: 1
+        datasources:
+        - name: MSSQL
+          type: mssql
+          url: mgmt-mysql-m-mysql.mysql.database.azure.com
+          user: admin
+          password:
+            secretKeyRef:
+              name: mysql-admin-pw
+              key: mysql-admin-pw
+          database: grafana
+          basicAuth: true
+          isDefault: true
+
   extraConfigmapMounts: []
   # - name: certs-configmap
   #   mountPath: /etc/grafana/ssl/
